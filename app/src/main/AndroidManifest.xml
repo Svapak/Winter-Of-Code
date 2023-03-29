@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginAndSignUp">
         <activity
-            android:name=".SignInActivity"
+            android:name=".Log_Out"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".FoundDes"
+            android:exported="false" />
+        <activity
+            android:name=".LostDes"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,12 +31,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".UploadFoundItem"
+            android:exported="false" />
+        <activity
+            android:name=".UploadLostItem"
+            android:exported="false" />
+        <activity
+            android:name=".UploadType"
+            android:exported="false" />
+        <activity
+            android:name=".SelectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

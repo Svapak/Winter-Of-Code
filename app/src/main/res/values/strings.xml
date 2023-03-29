@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">LoginAndSignup</string>
+    <string name="app_name">Discover</string>
+    <string name="title_activity_upload">Upload</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="just_bakwas">
+        o her daughter Anne. Elizabeth refuses and asks the outraged Lady Catherine to leave. Darcy, heartened by his aunt\'s indignant relaying of Elizabeth\'s response, again proposes to her and is accepted.
+    </string>
 </resources>

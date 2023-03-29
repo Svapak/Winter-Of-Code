@@ -2,6 +2,7 @@ package com.example.loginandsignup
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginandsignup.databinding.ActivitySignInBinding
@@ -25,6 +26,14 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.button.setOnClickListener {
+            val loading = LoadingDialog(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object :Runnable{
+                override fun run() {
+                    loading.isDismiss()
+                }
+            },5000)
             val email = binding.emailEt.text.toString()
             val pass = binding.passET.text.toString()
 
@@ -35,7 +44,7 @@ class SignInActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Password invalid", Toast.LENGTH_SHORT).show()
 
                     }
                 }
@@ -43,15 +52,6 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
 
             }
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if(firebaseAuth.currentUser != null){
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
     }
 }
